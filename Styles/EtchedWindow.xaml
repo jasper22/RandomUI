@@ -12,32 +12,34 @@
             <Border x:Name="OutherWindowBorder">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition x:Name="TopMenuButtonsRow" MaxHeight="20" />
                         <RowDefinition />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
-                        <ColumnDefinition MaxWidth="200" />
                     </Grid.ColumnDefinitions>
 
                     <Border x:Name="WindowBorder"
                             Grid.Row="0"
-                            Grid.RowSpan="2"
                             Grid.Column="0"
-                            Grid.ColumnSpan="2"
-                            Margin="20,10,0,0"
-                            Background="{DynamicResource WindowBackgroundBrush}"
-                            BorderBrush="{DynamicResource DefaultBorderBrush}"
+                            Margin="10"
                             BorderThickness="1"
                             ClipToBounds="False"
                             CornerRadius="7">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#E5FFFFFF" Offset="0"/>
+                                <GradientStop Color="#DCC8CCF2" Offset="0.745"/>
+                                <GradientStop Color="#D59EA5E8" Offset="0.917"/>
+                                <GradientStop Color="#D18089E1" Offset="0.972"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
                         <Grid x:Name="PART_VisualStateGrid">
-                            <VisualStateManager.VisualStateGroups>
+                            <!--<VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="WiGigWindowStates">
                                     <VisualState x:Name="Default" />
                                     <VisualState x:Name="ErrorState" />
                                 </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
+                            </VisualStateManager.VisualStateGroups>-->
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="12" />
                                 <RowDefinition Height="5" />
@@ -59,7 +61,7 @@
             </Border>
         </AdornerDecorator>
     </ControlTemplate>
-    <Style TargetType="{x:Type Controls:EtchedWindow}">
+    <Style BasedOn="{StaticResource {x:Type Window}}" TargetType="{x:Type Controls:EtchedWindow}">
         <Setter Property="Background" Value="{DynamicResource WindowBackgroundBrush}" />
         <Setter Property="WindowStyle" Value="None" />
         <Setter Property="ResizeMode" Value="NoResize" />

@@ -62,10 +62,8 @@
     <Compile Include="Behaviours\WindowResizeBehavior.cs" />
     <Compile Include="Controls\EtchedWindow.cs" />
     <Compile Include="Controls\Helpers\UnsafeNativeMethods.cs" />
+    <Compile Include="Controls\RoundedLaunchControl.cs" />
     <Compile Include="Controls\WindowResizingAdorner.cs" />
-    <Compile Include="Styles\RoundedLaunchControl.xaml.cs">
-      <DependentUpon>RoundedLaunchControl.xaml</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -78,11 +76,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Styles\RoundedLaunchControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <DependentUpon>Controls.xaml</DependentUpon>
-    </Page>
     <Page Include="Styles\Controls.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -92,7 +85,11 @@
       <Generator>MSBuild:Compile</Generator>
       <DependentUpon>Controls.xaml</DependentUpon>
     </Page>
-    <Page Include="Themes\Geenric.xaml">
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\RoundedLaunchControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
