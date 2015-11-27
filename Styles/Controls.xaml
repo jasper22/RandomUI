@@ -5,5 +5,6 @@
         <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/EtchedWindow.xaml" />
         <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/Brushes.xaml"/>
         <ResourceDictionary Source="RoundedLaunchControl.xaml"/>
+        <ResourceDictionary Source="Shapes.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

@@ -5,65 +5,11 @@
                     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                     mc:Ignorable="d">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Shapes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
     <ControlTemplate x:Key="RoundedLaunchControlTemplate" TargetType="{x:Type Controls:RoundedLaunchControl}">
         <ControlTemplate.Resources>
-            <Path x:Key="TopButtonClippingPath"
-                  Width="Auto"
-                  Height="Auto"
-                  HorizontalAlignment="Stretch"
-                  VerticalAlignment="Stretch"
-                  Data="M37.684389,0.5 C52.199121,0.50000012 65.468569,4.7745549 75.641077,11.839146 L76.63685,12.547539 58.022615,31.16177 57.949129,31.108767 C52.849787,27.604853 46.312311,25.5 39.184389,25.5 32.056463,25.5 25.518988,27.604853 20.419649,31.108767 L20.346159,31.16177 0.5,11.31561 0.79100227,11.118341 C10.816824,4.484841 23.670164,0.50000012 37.684389,0.5 z"
-                  Fill="{Binding Background,
-                                 RelativeSource={RelativeSource TemplatedParent}}"
-                  Stretch="UniformToFill" />
-
-            <Path x:Key="MiddleButton"
-                  Data="M45.214,20 C45.214,30.769553 35.20443,39.5 22.857,39.5 C10.50957,39.5 0.5,30.769553 0.5,20 C0.5,9.2304474 10.50957,0.5 22.857,0.5 C35.20443,0.5 45.214,9.2304474 45.214,20 z"
-                  Fill="{Binding Foreground,
-                                 RelativeSource={RelativeSource TemplatedParent}}"
-                  Stretch="Fill" />
-
-            <Path x:Key="LeftButtonShape"
-                  HorizontalAlignment="Stretch"
-                  VerticalAlignment="Stretch"
-                  Data="M14.313452,0.5 L35.704651,19.752079 35.538139,19.947044 C32.357319,23.867165 30.5,28.592937 30.5,33.679893 30.5,38.76685 32.357319,43.492619 35.538139,47.412743 L36.034809,47.994267 17.849506,63.781506 17.487806,63.498356 C6.9918713,55.083515 0.49999994,43.458515 0.5,30.617893 0.49999994,19.382351 5.4703388,9.0775166 13.74438,1.0395756 z"
-                  Fill="#FF6363F1"
-                  Stretch="Fill" />
-
-            <Path x:Key="BottomButtonShape"
-                  Width="Auto"
-                  Height="Auto"
-                  HorizontalAlignment="Stretch"
-                  VerticalAlignment="Stretch"
-                  Data="M54.347292,0.5 L69.294466,15.447174 68.657938,15.838425 C58.981066,21.640419 46.968821,25.076324 33.955614,25.076324 21.943422,25.076324 10.784124,22.148689 1.5272617,17.134857 L0.5,16.563934 16.563932,0.50000763 16.690874,0.59156036 C21.790213,4.0954742 28.327688,6.200325 35.455614,6.200325 42.583536,6.200325 49.121012,4.0954742 54.220354,0.59156036 z"
-                  Fill="{Binding Background,
-                                 RelativeSource={RelativeSource TemplatedParent}}"
-                  Stretch="UniformToFill" />
-
-
-            <RadialGradientBrush x:Key="ButtonBackgroundBrush" GradientOrigin="0.493,1.322" RadiusX="0.493" RadiusY="0.493">
-                <RadialGradientBrush.RelativeTransform>
-                    <TransformGroup>
-                        <ScaleTransform CenterX="0.5"
-                                        CenterY="0.5"
-                                        ScaleX="1"
-                                        ScaleY="1" />
-                        <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5" />
-                        <RotateTransform Angle="-0.9" CenterX="0.5" CenterY="0.5" />
-                        <TranslateTransform />
-                    </TransformGroup>
-                </RadialGradientBrush.RelativeTransform>
-                <GradientStop Offset="0.245" Color="#FF5FD453" />
-                <GradientStop Offset="1" Color="#99B6F3AF" />
-                <GradientStop Offset="0.899" Color="#C95FD453" />
-                <GradientStop Offset="0.557" Color="#EB5FD453" />
-            </RadialGradientBrush>
-            <RadialGradientBrush x:Key="TopButtonBackgroundBrush" GradientOrigin="0.495,1.04" RadiusX="0.518" RadiusY="0.518">
-                <GradientStop Offset="0" Color="#FF3BE23B" />
-                <GradientStop Offset="1" Color="#CCFFFFFF" />
-                <GradientStop Offset="0.777" Color="#FA4BE44B" />
-                <GradientStop Offset="0.885" Color="#EB84EC84" />
-            </RadialGradientBrush>
             <Storyboard x:Key="CircleAnimation" RepeatBehavior="Forever">
                 <DoubleAnimationUsingPath Duration="0:0:2" Source="X" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="ellipse">
                     <DoubleAnimationUsingPath.PathGeometry>
@@ -169,7 +115,7 @@
                             HorizontalContentAlignment="Left"
                             BorderBrush="{x:Null}"
                             Clip="{Binding Data,
-                                           Source={StaticResource TopButtonClippingPath}}"
+                                           Source={StaticResource LauncherTopButtonShape}}"
                             RenderTransformOrigin="0.5,0.5"
                             SnapsToDevicePixels="True" Background="{DynamicResource LauncherTopButtonBackgroundBrush}">
                         <Button.RenderTransform>
@@ -200,7 +146,7 @@
 
                     <Button BorderBrush="{x:Null}"
                             Clip="{Binding Data,
-                                           Source={StaticResource LeftButtonShape}}"
+                                           Source={StaticResource LauncherLeftButtonShape}}"
                             RenderTransformOrigin="0.5,0.5"
                             SnapsToDevicePixels="True" Background="{DynamicResource LancherLeftButtonBackgroundBrush}">
                         <Button.RenderTransform>
@@ -281,7 +227,7 @@
                     <Button Margin="5,0,0,0"
                             BorderBrush="{x:Null}"
                             Clip="{Binding Data,
-                                           Source={StaticResource BottomButtonShape}}"
+                                           Source={StaticResource LauncherBottomButtonShape}}"
                             RenderTransformOrigin="0.5,0.5"
                             SnapsToDevicePixels="True" Background="{DynamicResource LauncherBottomButtonBackgroundBrush}">
                         <Button.RenderTransform>
