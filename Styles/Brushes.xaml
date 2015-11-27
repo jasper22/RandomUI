@@ -1,10 +1,34 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:RandomUI.Styles">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <LinearGradientBrush x:Key="MainWindowBackground" EndPoint="0.5,1" StartPoint="0.5,0">
         <GradientStop Color="#E5FFFFFF" Offset="0"/>
         <GradientStop Color="#DCC8CCF2" Offset="0.745"/>
         <GradientStop Color="#D59EA5E8" Offset="0.917"/>
         <GradientStop Color="#D18089E1" Offset="0.972"/>
     </LinearGradientBrush>
+
+    <RadialGradientBrush x:Key="LauncherTopButtonBackgroundBrush" GradientOrigin="0.495,1.04" RadiusY="0.518" RadiusX="0.518">
+        <GradientStop Color="#FF224EE2" Offset="0.075"/>
+        <GradientStop Color="#CCFFFFFF" Offset="0.964"/>
+        <GradientStop Color="#F06180EA" Offset="0.576"/>
+        <GradientStop Color="#E1A2B4F2" Offset="0.773"/>
+        <GradientStop Color="#D8C8D3F7" Offset="0.903"/>
+    </RadialGradientBrush>
+
+    <RadialGradientBrush x:Key="LancherLeftButtonBackgroundBrush" GradientOrigin="1.373,0.494" RadiusY="0.546" RadiusX="0.546">
+        <GradientStop Color="#FF224EE2" Offset="0.075"/>
+        <GradientStop Color="#CCFFFFFF" Offset="0.964"/>
+        <GradientStop Color="#F06180EA" Offset="0.576"/>
+        <GradientStop Color="#E1A2B4F2" Offset="0.773"/>
+        <GradientStop Color="#D8C8D3F7" Offset="0.903"/>
+    </RadialGradientBrush>
+
+    <RadialGradientBrush x:Key="LauncherBottomButtonBackgroundBrush" GradientOrigin="0.481,-0.312" RadiusY="0.497" RadiusX="0.497" Center="0.463,0.5">
+        <GradientStop Color="#FF224EE2" Offset="0.075"/>
+        <GradientStop Color="#E494A9F1" Offset="0.698"/>
+        <GradientStop Color="#D9C4CFF7" Offset="0.914"/>
+        <GradientStop Color="#D3DDE3FA" Offset="0.953"/>
+        <GradientStop Color="#DEACBCF4" Offset="0.87"/>
+    </RadialGradientBrush>
+
 </ResourceDictionary>

@@ -12,8 +12,8 @@
             <Border x:Name="OutherWindowBorder">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="96" />
-                        <RowDefinition  />
+                        <RowDefinition Height="101" />
+                        <RowDefinition Height="*"  />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="111" />
@@ -37,7 +37,8 @@
                                 </VisualStateGroup>
                             </VisualStateManager.VisualStateGroups>-->
                             <Grid.RowDefinitions>
-                                <RowDefinition />
+                                <RowDefinition Height="10*" />
+                                <RowDefinition Height="43*"/>
                             </Grid.RowDefinitions>
 
 
@@ -45,13 +46,16 @@
                 				Grid.Row="1"
                 				Content="{TemplateBinding Content}"
                 				ContentTemplate="{TemplateBinding ContentTemplate}"
-                				ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" />
+                				ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" Grid.RowSpan="2" />
                         </Grid>
                     </Border>
                     <Controls:RoundedLaunchControl x:Name="roundedLaunchControl" Grid.Column="0" Grid.Row="0" Template="{DynamicResource RoundedLaunchControlTemplate}" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" />
                 </Grid>
             </Border>
         </AdornerDecorator>
+        <ControlTemplate.Triggers>
+            <EventTrigger RoutedEvent="FrameworkElement.Loaded"/>
+        </ControlTemplate.Triggers>
     </ControlTemplate>
     <Style BasedOn="{StaticResource {x:Type Window}}" TargetType="{x:Type Controls:EtchedWindow}">
         <Setter Property="Background" Value="{DynamicResource WindowBackgroundBrush}" />
