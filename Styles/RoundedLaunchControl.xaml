@@ -228,12 +228,11 @@
                           StrokeThickness="0.2"
                           d:LayoutOverrides="Width, Height" />
                     <Button
-                            Background="{DynamicResource LauncherBottomButtonBackgroundBrush}"
                             BorderBrush="White"
                             Clip="{Binding Data,
                                            Source={StaticResource LauncherBottomButtonShape}}"
                             RenderTransformOrigin="0.5,0.5"
-                            SnapsToDevicePixels="True">
+                            SnapsToDevicePixels="True" Background="{DynamicResource LauncherBottomButtonBackgroundBrush}">
                         <Button.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform ScaleX="1.15" ScaleY="1.1" />

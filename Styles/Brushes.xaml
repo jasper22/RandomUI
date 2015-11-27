@@ -22,12 +22,11 @@
         <GradientStop Offset="0.903" Color="#D8C8D3F7" />
     </RadialGradientBrush>
 
-    <RadialGradientBrush x:Key="LauncherBottomButtonBackgroundBrush" Center="0.463,0.5" GradientOrigin="0.481,-0.312" RadiusX="0.497" RadiusY="0.497">
-        <GradientStop Offset="0.075" Color="#FF224EE2" />
-        <GradientStop Offset="0.698" Color="#E494A9F1" />
-        <GradientStop Offset="0.914" Color="#D9C4CFF7" />
-        <GradientStop Offset="0.953" Color="#D3DDE3FA" />
-        <GradientStop Offset="0.87" Color="#DEACBCF4" />
+    <RadialGradientBrush x:Key="LauncherBottomButtonBackgroundBrush" Center="0.436,0.298" GradientOrigin="0.435,-0.327" RadiusY="0.516" RadiusX="0.49">
+        <GradientStop Color="#FF224EE2" Offset="0.075"/>
+        <GradientStop Color="#E494A9F1" Offset="0.762"/>
+        <GradientStop Color="#D3DDE3FA" Offset="0.986"/>
+        <GradientStop Color="#DEACBCF4" Offset="0.903"/>
     </RadialGradientBrush>
 
 </ResourceDictionary>
