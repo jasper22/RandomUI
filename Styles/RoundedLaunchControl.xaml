@@ -6,19 +6,25 @@
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                     mc:Ignorable="d">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="Shapes.xaml"/>
+        <ResourceDictionary Source="Shapes.xaml" />
     </ResourceDictionary.MergedDictionaries>
     <ControlTemplate x:Key="RoundedLaunchControlTemplate" TargetType="{x:Type Controls:RoundedLaunchControl}">
         <ControlTemplate.Resources>
             <Storyboard x:Key="CircleAnimation" RepeatBehavior="Forever">
-                <DoubleAnimationUsingPath Duration="0:0:2" Source="X" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="ellipse">
+                <DoubleAnimationUsingPath Duration="0:0:2"
+                                          Source="X"
+                                          Storyboard.TargetName="ellipse"
+                                          Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
                     <DoubleAnimationUsingPath.PathGeometry>
-                        <PathGeometry Figures="M-0.264,0 C-0.264,10.836931 -10.912683,19.622 -24.0485,19.622 C-37.184317,19.622 -47.833,10.836931 -47.833,0 C-47.833,-10.836931 -37.184317,-19.622 -24.0485,-19.622 C-10.912683,-19.622 -0.264,-10.836931 -0.264,0 z"/>
+                        <PathGeometry Figures="M-0.264,0 C-0.264,10.836931 -10.912683,19.622 -24.0485,19.622 C-37.184317,19.622 -47.833,10.836931 -47.833,0 C-47.833,-10.836931 -37.184317,-19.622 -24.0485,-19.622 C-10.912683,-19.622 -0.264,-10.836931 -0.264,0 z" />
                     </DoubleAnimationUsingPath.PathGeometry>
                 </DoubleAnimationUsingPath>
-                <DoubleAnimationUsingPath Duration="0:0:2" Source="Y" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="ellipse">
+                <DoubleAnimationUsingPath Duration="0:0:2"
+                                          Source="Y"
+                                          Storyboard.TargetName="ellipse"
+                                          Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
                     <DoubleAnimationUsingPath.PathGeometry>
-                        <PathGeometry Figures="M-0.264,0 C-0.264,10.836931 -10.912683,19.622 -24.0485,19.622 C-37.184317,19.622 -47.833,10.836931 -47.833,0 C-47.833,-10.836931 -37.184317,-19.622 -24.0485,-19.622 C-10.912683,-19.622 -0.264,-10.836931 -0.264,0 z"/>
+                        <PathGeometry Figures="M-0.264,0 C-0.264,10.836931 -10.912683,19.622 -24.0485,19.622 C-37.184317,19.622 -47.833,10.836931 -47.833,0 C-47.833,-10.836931 -37.184317,-19.622 -24.0485,-19.622 C-10.912683,-19.622 -0.264,-10.836931 -0.264,0 z" />
                     </DoubleAnimationUsingPath.PathGeometry>
                 </DoubleAnimationUsingPath>
             </Storyboard>
@@ -32,7 +38,9 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Ellipse x:Name="ElipseAnimationPath" Margin="34.903,28.032,17.528,37.724" StrokeThickness="0.2" />
+            <Ellipse x:Name="ElipseAnimationPath"
+                     Margin="34.903,28.032,17.528,37.724"
+                     StrokeThickness="0.2" />
 
             <Ellipse x:Name="ellipse"
                      Width="6.528"
@@ -44,12 +52,12 @@
                      Stroke="Black"
                      StrokeThickness="0.2">
                 <Ellipse.Fill>
-                    <RadialGradientBrush RadiusY="0.518" RadiusX="0.518">
-                        <GradientStop Color="#FF224EE2" Offset="0.075"/>
-                        <GradientStop Color="#CCFFFFFF" Offset="0.964"/>
-                        <GradientStop Color="#F06180EA" Offset="0.576"/>
-                        <GradientStop Color="#E1A2B4F2" Offset="0.773"/>
-                        <GradientStop Color="#D8C8D3F7" Offset="0.903"/>
+                    <RadialGradientBrush RadiusX="0.518" RadiusY="0.518">
+                        <GradientStop Offset="0.075" Color="#FF224EE2" />
+                        <GradientStop Offset="0.964" Color="#CCFFFFFF" />
+                        <GradientStop Offset="0.576" Color="#F06180EA" />
+                        <GradientStop Offset="0.773" Color="#E1A2B4F2" />
+                        <GradientStop Offset="0.903" Color="#D8C8D3F7" />
                     </RadialGradientBrush>
                 </Ellipse.Fill>
                 <Ellipse.RenderTransform>
@@ -113,11 +121,12 @@
 
                     <Button Grid.Row="0"
                             HorizontalContentAlignment="Left"
+                            Background="{DynamicResource LauncherTopButtonBackgroundBrush}"
                             BorderBrush="White"
                             Clip="{Binding Data,
                                            Source={StaticResource LauncherTopButtonShape}}"
                             RenderTransformOrigin="0.5,0.5"
-                            SnapsToDevicePixels="True" Background="{DynamicResource LauncherTopButtonBackgroundBrush}">
+                            SnapsToDevicePixels="True">
                         <Button.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform ScaleX="1.04" />
@@ -126,7 +135,7 @@
                                 <TranslateTransform />
                             </TransformGroup>
                         </Button.RenderTransform>
-                        <ContentControl Content="{DynamicResource PauseIcon}" Margin="32,0,0,27" />
+                        <ContentControl Margin="32,0,0,27" Content="{DynamicResource PauseIcon}" />
                     </Button>
                 </Grid>
                 <Grid x:Name="GridLeftButton"
@@ -143,11 +152,13 @@
                           Stroke="Black"
                           StrokeThickness="0.2" />
 
-                    <Button BorderBrush="{x:Null}"
+                    <Button Margin="0,0,0,-3"
+                            Background="{DynamicResource LancherLeftButtonBackgroundBrush}"
+                            BorderBrush="White"
                             Clip="{Binding Data,
                                            Source={StaticResource LauncherLeftButtonShape}}"
                             RenderTransformOrigin="0.5,0.5"
-                            SnapsToDevicePixels="True" Background="{DynamicResource LancherLeftButtonBackgroundBrush}">
+                            SnapsToDevicePixels="True">
                         <Button.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform />
@@ -156,6 +167,7 @@
                                 <TranslateTransform Y="-1.5" />
                             </TransformGroup>
                         </Button.RenderTransform>
+                        <ContentControl Content="{DynamicResource StopIcon}" Margin="0,0,17,10" />
                     </Button>
                 </Grid>
                 <Grid x:Name="GridCenterButton"
@@ -164,8 +176,7 @@
                       Grid.Column="2"
                       Grid.ColumnSpan="2"
                       d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
-                    <Path 
-                        Data="M45.214,20 C45.214,30.769553 35.20443,39.5 22.857,39.5 C10.50957,39.5 0.5,30.769553 0.5,20 C0.5,9.2304474 10.50957,0.5 22.857,0.5 C35.20443,0.5 45.214,9.2304474 45.214,20 z"
+                    <Path Data="M45.214,20 C45.214,30.769553 35.20443,39.5 22.857,39.5 C10.50957,39.5 0.5,30.769553 0.5,20 C0.5,9.2304474 10.50957,0.5 22.857,0.5 C35.20443,0.5 45.214,9.2304474 45.214,20 z"
                           Fill="{Binding Foreground,
                                          RelativeSource={RelativeSource TemplatedParent}}"
                           Stretch="Uniform"
@@ -177,19 +188,19 @@
                             d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
                         <Button.RenderTransform>
                             <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform X="-0.5" Y="-0.5"/>
+                                <ScaleTransform />
+                                <SkewTransform />
+                                <RotateTransform />
+                                <TranslateTransform X="-0.5" Y="-0.5" />
                             </TransformGroup>
                         </Button.RenderTransform>
                         <Button.Background>
-                            <RadialGradientBrush RadiusY="0.494" RadiusX="0.522" Center="0.521,0.5" GradientOrigin="0.521,0.5">
-                                <GradientStop Color="#FF224EE2" Offset="0.075"/>
-                                <GradientStop Color="#CCFFFFFF" Offset="0.964"/>
-                                <GradientStop Color="#F06180EA" Offset="0.576"/>
-                                <GradientStop Color="#E1A2B4F2" Offset="0.773"/>
-                                <GradientStop Color="#D8C8D3F7" Offset="0.903"/>
+                            <RadialGradientBrush Center="0.521,0.5" GradientOrigin="0.521,0.5" RadiusX="0.522" RadiusY="0.494">
+                                <GradientStop Offset="0.075" Color="#FF224EE2" />
+                                <GradientStop Offset="0.964" Color="#CCFFFFFF" />
+                                <GradientStop Offset="0.576" Color="#F06180EA" />
+                                <GradientStop Offset="0.773" Color="#E1A2B4F2" />
+                                <GradientStop Offset="0.903" Color="#D8C8D3F7" />
                             </RadialGradientBrush>
                         </Button.Background>
                         <Button.Clip>
@@ -197,7 +208,10 @@
                                              RadiusX="19"
                                              RadiusY="16" />
                         </Button.Clip>
-                        <ContentControl Height="12" Width="12" Margin="4,0,0,0" Content="{DynamicResource PlayIcon}" />
+                        <ContentControl Width="12"
+                                        Height="12"
+                                        Margin="4,0,0,0"
+                                        Content="{DynamicResource PlayIcon}" />
                     </Button>
                 </Grid>
                 <Grid x:Name="GridBottomButton"
@@ -213,20 +227,22 @@
                           Stroke="Black"
                           StrokeThickness="0.2"
                           d:LayoutOverrides="Width, Height" />
-                    <Button Margin="5,0,0,0"
-                            BorderBrush="{x:Null}"
+                    <Button
+                            Background="{DynamicResource LauncherBottomButtonBackgroundBrush}"
+                            BorderBrush="White"
                             Clip="{Binding Data,
                                            Source={StaticResource LauncherBottomButtonShape}}"
                             RenderTransformOrigin="0.5,0.5"
-                            SnapsToDevicePixels="True" Background="{DynamicResource LauncherBottomButtonBackgroundBrush}">
+                            SnapsToDevicePixels="True">
                         <Button.RenderTransform>
                             <TransformGroup>
-                                <ScaleTransform ScaleX="1.1" ScaleY="1.1"/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform Y="3" X="1"/>
+                                <ScaleTransform ScaleX="1.15" ScaleY="1.1" />
+                                <SkewTransform />
+                                <RotateTransform />
+                                <TranslateTransform X="6" Y="3" />
                             </TransformGroup>
                         </Button.RenderTransform>
+                        <ContentControl Content="{DynamicResource ForwardIcon}" Margin="0,0,11,12" />
                     </Button>
                 </Grid>
 
@@ -234,7 +250,7 @@
         </Grid>
         <ControlTemplate.Triggers>
             <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-                <BeginStoryboard Storyboard="{StaticResource CircleAnimation}"/>
+                <BeginStoryboard Storyboard="{StaticResource CircleAnimation}" />
             </EventTrigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>

@@ -68,5 +68,33 @@
               StrokeThickness="0.6" />
     </Canvas>
 
+    <Canvas x:Key="StopIcon">
+        <Path Width="12"
+              Height="12"
+              Data="M0,0L32,0 32,32 0,32z"
+              Fill="{Binding BorderBrush,
+                             RelativeSource={RelativeSource FindAncestor,
+                                                            AncestorType={x:Type Button}}}"
+              RenderTransformOrigin="0.5,0.5"
+              Stretch="Fill"
+              Stroke="#FF6A6A6A"
+              StrokeEndLineCap="Round"
+              StrokeStartLineCap="Round"
+              StrokeThickness="0.6" />
+    </Canvas>
 
+    <Canvas x:Key="ForwardIcon">
+        <Path Width="12"
+              Height="12"
+              Data="M0,1.8419809L13.104,12.622992 13.104,1.8419809 26.459,12.829992 13.104,23.814006 13.104,13.036993 0,23.814006 0,12.829992z M26.459,0L32,0 32,24.464002 26.459,24.464002 26.459,12.830999 26.459,12.829992z" 
+              Fill="{Binding BorderBrush,
+                             RelativeSource={RelativeSource FindAncestor,
+                                                            AncestorType={x:Type Button}}}"
+              RenderTransformOrigin="0.5,0.5"
+              Stretch="Fill"
+              Stroke="#FF6A6A6A"
+              StrokeEndLineCap="Round"
+              StrokeStartLineCap="Round"
+              StrokeThickness="0.6" />
+    </Canvas>
 </ResourceDictionary>
