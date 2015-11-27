@@ -24,15 +24,7 @@
                             Margin="10"
                             BorderThickness="1"
                             ClipToBounds="False"
-                            CornerRadius="7">
-                        <Border.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="#E5FFFFFF" Offset="0"/>
-                                <GradientStop Color="#DCC8CCF2" Offset="0.745"/>
-                                <GradientStop Color="#D59EA5E8" Offset="0.917"/>
-                                <GradientStop Color="#D18089E1" Offset="0.972"/>
-                            </LinearGradientBrush>
-                        </Border.Background>
+                            CornerRadius="7" Background="{DynamicResource MainWindowBackground}">
                         <Grid x:Name="PART_VisualStateGrid">
                             <!--<VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="WiGigWindowStates">

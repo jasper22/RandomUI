@@ -3,5 +3,6 @@
                     xmlns:local="clr-namespace:RandomUI.Styles">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/EtchedWindow.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/Brushes.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

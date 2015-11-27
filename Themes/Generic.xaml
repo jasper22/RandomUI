@@ -5,4 +5,5 @@
         <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/Controls.xaml" />
         <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/EtchedWindow.xaml" />
     </ResourceDictionary.MergedDictionaries>
+
 </ResourceDictionary>
