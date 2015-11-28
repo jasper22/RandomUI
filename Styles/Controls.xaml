@@ -2,9 +2,11 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:RandomUI.Styles">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/EtchedWindow.xaml" />
         <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/Brushes.xaml"/>
-        <ResourceDictionary Source="RoundedLaunchControl.xaml"/>
-        <ResourceDictionary Source="Shapes.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/Shapes.xaml"/>
+
+        <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/RoundedLaunchControl.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/CalloutComboBox.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/EtchedWindow.xaml" />        
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

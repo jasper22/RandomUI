@@ -8,10 +8,10 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("RandomUI")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Collection of XAML controls templates and styles")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("RandomUI")]
+[assembly: AssemblyProduct("Random UI XAML Controls")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -29,6 +29,8 @@ using System.Windows;
 //the line below to match the UICulture setting in the project file.
 
 //[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
+
+[assembly: System.Windows.Markup.XmlnsDefinition("https://github.com/jasper22/RandomUI", "RandomUI.Controls")]
 
 
 [assembly: ThemeInfo(
@@ -53,3 +55,5 @@ using System.Windows;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: NeutralResourcesLanguage("en")]
+

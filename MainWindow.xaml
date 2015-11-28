@@ -11,5 +11,18 @@
                        Template="{DynamicResource EtchedWindowKey}"
                        WindowStyle="None"
                        mc:Ignorable="d">
-    <Grid />
+    <Grid>
+        <Controls:CalloutComboBox x:Name="CalloutComboBox"
+                                  Width="140"
+                                  Height="25"
+                                  Margin="10,30,0,0"
+                                  HorizontalAlignment="Left"
+                                  VerticalAlignment="Top"
+                                  Template="{DynamicResource CalloutComboBoxTemplate}">
+            <ComboBoxItem Content="Item 1" />
+            <ComboBoxItem Content="Item 2" />
+            <ComboBoxItem Content="Item 3" />
+            <ComboBoxItem Content="Item 4" />
+        </Controls:CalloutComboBox>
+    </Grid>
 </Controls:EtchedWindow>
