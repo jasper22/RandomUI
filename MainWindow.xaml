@@ -29,5 +29,7 @@
             <TextBlock Text="Half opaque background" TextWrapping="Wrap" FontFamily="Arial" FontSize="13.333" FontWeight="Bold" Margin="4,4,0,0" />
         </Grid>
 
+
+        <Controls:ToggleSwitch LeftText="Ok" RightText="No" Margin="15,70,0,0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="65" Template="{DynamicResource ToggleSwitchTemplate}" BorderBrush="#FFAAA0A0" />
     </Grid>
 </Controls:EtchedWindow>

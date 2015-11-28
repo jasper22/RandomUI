@@ -7,6 +7,8 @@
 
         <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/RoundedLaunchControl.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/CalloutComboBox.xaml"/>
-        <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/EtchedWindow.xaml" />        
+        <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/EtchedWindow.xaml" />
+        <ResourceDictionary Source="ToggleSwitch.xaml"/>
+        <ResourceDictionary Source="Typography.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
