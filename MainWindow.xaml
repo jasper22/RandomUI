@@ -24,5 +24,10 @@
             <ComboBoxItem Content="Item 3" />
             <ComboBoxItem Content="Item 4" />
         </Controls:CalloutComboBox>
+        <TextBlock Height="20" Margin="195,30,225,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontFamily="Arial" FontSize="13.333" FontWeight="Bold"/>
+        <Grid Height="45" Margin="220,10,135,0" VerticalAlignment="Top" Background="{DynamicResource GreyHalfTransperantBrush}">
+            <TextBlock Text="Another text block" TextWrapping="Wrap" FontFamily="Arial" FontSize="13.333" FontWeight="Bold" Margin="4,4,0,0" />
+        </Grid>
+
     </Grid>
 </Controls:EtchedWindow>

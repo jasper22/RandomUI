@@ -1,4 +1,5 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ValueConverters="clr-namespace:RandomUI.Controls.ValueConverters">
 
     <Color x:Key="DefaultHighlightSolidColor">Orange</Color>
 
@@ -33,5 +34,76 @@
         <GradientStop Color="#D3DDE3FA" Offset="0.986"/>
         <GradientStop Color="#DEACBCF4" Offset="0.903"/>
     </RadialGradientBrush>
+
+    <VisualBrush x:Key="GreyHalfTransperantBrush">
+        <VisualBrush.Visual>
+            <Grid x:Name="Item1"
+                  Width="{Binding ActualWidth,
+                                  Mode=OneWay,
+                                  RelativeSource={RelativeSource FindAncestor,
+                                                                 AncestorType={x:Type Control}}}"
+                  Height="{Binding ActualHeight,
+                                   Mode=OneWay,
+                                   RelativeSource={RelativeSource FindAncestor,
+                                                                  AncestorType={x:Type Control}}}"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"
+                  Cursor="Hand"
+                  RenderTransformOrigin="0.5,0.5">
+                <Grid.Resources>
+                    <ValueConverters:TranslateTransformToRectViewboxVisualBrushConverter x:Key="translateTransformToRectViewboxVisualBrushConverter" />
+                </Grid.Resources>
+                <Grid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform />
+                        <TranslateTransform X="10" Y="10" />
+                    </TransformGroup>
+                </Grid.RenderTransform>
+                <!--<i:Interaction.Behaviors>
+                <ei:MouseDragElementBehavior ConstrainToParentBounds="True" />
+            </i:Interaction.Behaviors>-->
+                <Rectangle Margin="-3"
+                           Fill="#19000000"
+                           RadiusX="3"
+                           RadiusY="3"
+                           StrokeThickness="0" />
+                <Rectangle Margin="-2"
+                           Fill="#19000000"
+                           RadiusX="2"
+                           RadiusY="2"
+                           StrokeThickness="0" />
+                <Rectangle Margin="-1"
+                           Fill="#33000000"
+                           RadiusX="1"
+                           RadiusY="1"
+                           StrokeThickness="0" />
+                <Rectangle>
+                    <Rectangle.Effect>
+                        <BlurEffect Radius="10" />
+                    </Rectangle.Effect>
+                    <Rectangle.Fill>
+                        <VisualBrush AlignmentX="Left"
+                                     AlignmentY="Top"
+                                     Stretch="None"
+                                     Viewbox="{Binding RenderTransform.Children[3],
+                                                       Converter={StaticResource translateTransformToRectViewboxVisualBrushConverter},
+                                                       RelativeSource={RelativeSource AncestorType={x:Type Grid},
+                                                                                      Mode=FindAncestor},
+                                                       UpdateSourceTrigger=PropertyChanged}"
+                                     ViewboxUnits="Absolute"
+                                     Visual="{Binding ElementName=BackgroundContainer}">
+                            <VisualBrush.Transform>
+                                <TranslateTransform X="0" />
+                            </VisualBrush.Transform>
+                        </VisualBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle Fill="#E5FFFFFF" />
+                <Rectangle Stroke="#35FFFFFF" />
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
 
 </ResourceDictionary>
