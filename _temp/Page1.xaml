@@ -1,15 +1,189 @@
 ﻿<Page x:Class="RandomUI._temp.Page1"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:RandomUI._temp"
-      mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
       xmlns:Controls="clr-namespace:RandomUI.Controls"
-      Title="Page1">
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:local="clr-namespace:RandomUI._temp"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      Title="Page1"
+      d:DesignHeight="300"
+      d:DesignWidth="300"
+      mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Storyboard x:Key="MoveEleipsesAnimation">
+                <DoubleAnimation BeginTime="0:0:0.1"
+                                 Duration="0:0:0.5"
+                                 From="0"
+                                 Storyboard.TargetName="ellipse_4"
+                                 Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                                 To="200" />
+                <DoubleAnimation BeginTime="0:0:1"
+                                 Duration="0:0:0.5"
+                                 From="200"
+                                 Storyboard.TargetName="ellipse_4"
+                                 Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                                 To="0" />
 
-    <Grid>
-        <Controls:ToggleSwitch LeftText="Ok" RightText="No" Margin="95,100,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="55" Template="{DynamicResource ToggleSwitchTemplate}" />
-    </Grid>
+                <DoubleAnimation BeginTime="0:0:0.2"
+                                 Duration="0:0:0.5"
+                                 From="0"
+                                 Storyboard.TargetName="ellipse_3"
+                                 Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                                 To="200" />
+                <DoubleAnimation BeginTime="0:0:0.9"
+                                 Duration="0:0:0.5"
+                                 From="200"
+                                 Storyboard.TargetName="ellipse_3"
+                                 Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                                 To="0" />
+
+                <DoubleAnimation BeginTime="0:0:0.3"
+                                 Duration="0:0:0.5"
+                                 From="0"
+                                 Storyboard.TargetName="ellipse_2"
+                                 Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                                 To="200" />
+                <DoubleAnimation BeginTime="0:0:0.8"
+                                 Duration="0:0:0.5"
+                                 From="200"
+                                 Storyboard.TargetName="ellipse_2"
+                                 Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                                 To="0" />
+
+                <DoubleAnimation BeginTime="0:0:0.4"
+                                 Duration="0:0:0.5"
+                                 From="0"
+                                 Storyboard.TargetName="ellipse_1"
+                                 Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                                 To="200" />
+                <DoubleAnimation BeginTime="0:0:0.7"
+                                 Duration="0:0:0.5"
+                                 From="200"
+                                 Storyboard.TargetName="ellipse_1"
+                                 Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                                 To="0" />
+
+                <DoubleAnimation BeginTime="0:0:0"
+                                 Duration="0:0:0.5"
+                                 From="0"
+                                 Storyboard.TargetName="ellipse_5"
+                                 Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                                 To="200" />
+                <DoubleAnimation BeginTime="0:0:1.1"
+                                 Duration="0:0:0.5"
+                                 From="200"
+                                 Storyboard.TargetName="ellipse_5"
+                                 Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                                 To="0" />
+            </Storyboard>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Page.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource MoveEleipsesAnimation}" />
+        </EventTrigger>
+    </Page.Triggers>
+    <!--<Grid>
+        <Grid x:Name="templateRoot"
+              Height="20"
+              VerticalAlignment="Top">
+            <Ellipse x:Name="ellipse_1"
+                     Width="{Binding ActualHeight,
+                                     Mode=OneWay,
+                                     RelativeSource={RelativeSource FindAncestor,
+                                                                    AncestorType={x:Type Grid}}}"
+                     HorizontalAlignment="Left"
+                     Fill="{TemplateBinding Foreground}"
+                     RenderTransformOrigin="0.5,0.5"
+                     Stroke="Black">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+            <Ellipse x:Name="ellipse_2"
+                     Width="{Binding ActualHeight,
+                                     Mode=OneWay,
+                                     RelativeSource={RelativeSource FindAncestor,
+                                                                    AncestorType={x:Type Grid}}}"
+                     Margin="19.375,0,0,0"
+                     HorizontalAlignment="Left"
+                     Fill="{TemplateBinding Foreground}"
+                     RenderTransformOrigin="0.5,0.5"
+                     Stroke="Black">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform />
+                        <TranslateTransform X="0" />
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+            <Ellipse x:Name="ellipse_3"
+                     Width="{Binding ActualHeight,
+                                     Mode=OneWay,
+                                     RelativeSource={RelativeSource FindAncestor,
+                                                                    AncestorType={x:Type Grid}}}"
+                     Margin="38.5,0,0,0"
+                     HorizontalAlignment="Left"
+                     Fill="{TemplateBinding Foreground}"
+                     RenderTransformOrigin="0.5,0.5"
+                     Stroke="Black">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform />
+                        <TranslateTransform X="0" />
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+            <Ellipse x:Name="ellipse_4"
+                     Width="{Binding ActualHeight,
+                                     Mode=OneWay,
+                                     RelativeSource={RelativeSource FindAncestor,
+                                                                    AncestorType={x:Type Grid}}}"
+                     Margin="58,0,0,0"
+                     HorizontalAlignment="Left"
+                     Fill="{TemplateBinding Foreground}"
+                     RenderTransformOrigin="0.5,0.5"
+                     Stroke="Black">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform />
+                        <TranslateTransform X="0" />
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+            <Ellipse x:Name="ellipse_5"
+                     Width="{Binding ActualHeight,
+                                     Mode=OneWay,
+                                     RelativeSource={RelativeSource FindAncestor,
+                                                                    AncestorType={x:Type Grid}}}"
+                     Margin="76.75,0,0,0"
+                     HorizontalAlignment="Left"
+                     Fill="{TemplateBinding Foreground}"
+                     RenderTransformOrigin="0.5,0.5"
+                     Stroke="Black">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+        </Grid>
+    </Grid>-->
 </Page>

@@ -4,11 +4,12 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/Brushes.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/Shapes.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/Typography.xaml"/>
 
         <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/RoundedLaunchControl.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/CalloutComboBox.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/EtchedWindow.xaml" />
-        <ResourceDictionary Source="ToggleSwitch.xaml"/>
-        <ResourceDictionary Source="Typography.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/ToggleSwitch.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/RandomUI;component/Styles/BusyAnimation1.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

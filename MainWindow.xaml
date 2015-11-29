@@ -24,12 +24,40 @@
             <ComboBoxItem Content="Item 3" />
             <ComboBoxItem Content="Item 4" />
         </Controls:CalloutComboBox>
-        <TextBlock Height="20" Margin="185,35,235,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontFamily="Arial" FontSize="13.333" FontWeight="Bold"/>
-        <Grid Height="60" Margin="220,10,60,0" VerticalAlignment="Top" Background="{DynamicResource GreyHalfTransperantBrush}">
-            <TextBlock Text="Half opaque background" TextWrapping="Wrap" FontFamily="Arial" FontSize="13.333" FontWeight="Bold" Margin="4,4,0,0" />
+        <TextBlock Height="20"
+                   Margin="185,35,235,0"
+                   VerticalAlignment="Top"
+                   FontFamily="Arial"
+                   FontSize="13.333"
+                   FontWeight="Bold"
+                   Text="TextBlock"
+                   TextWrapping="Wrap" />
+        <Grid Height="60"
+              Margin="220,10,60,0"
+              VerticalAlignment="Top"
+              Background="{DynamicResource GreyHalfTransperantBrush}">
+            <TextBlock Margin="4,4,0,0"
+                       FontFamily="Arial"
+                       FontSize="13.333"
+                       FontWeight="Bold"
+                       Text="Half opaque background"
+                       TextWrapping="Wrap" />
         </Grid>
 
 
-        <Controls:ToggleSwitch LeftText="Ok" RightText="No" Margin="15,70,0,0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="65" Template="{DynamicResource ToggleSwitchTemplate}" BorderBrush="#FFAAA0A0" />
+        <Controls:ToggleSwitch Width="65"
+                               Height="25"
+                               Margin="15,70,0,0"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               BorderBrush="#FFAAA0A0"
+                               LeftText="Ok"
+                               RightText="No"
+                               Template="{DynamicResource ToggleSwitchTemplate}" />
+        <Controls:BusyAnimation1 x:Name="BusyAnimation1"
+                                 Height="7"
+                                 Margin="220,88,10,0"
+                                 VerticalAlignment="Top"
+                                 Template="{DynamicResource BusyAnimation1Template}" />
     </Grid>
 </Controls:EtchedWindow>
