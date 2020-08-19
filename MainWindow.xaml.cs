@@ -20,6 +20,8 @@ namespace RandomUI
     /// </summary>
     public partial class MainWindow
     {
+        private static object DataContext2 = new object();
+
         public MainWindow()
         {
             InitializeComponent();
