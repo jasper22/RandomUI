@@ -2,7 +2,7 @@
 namespace RandomUI.Behaviours
 {
     using System.Windows;
-    using System.Windows.Interactivity;
+    using Microsoft.Xaml.Behaviors;
 
     /// <summary>
     /// Object provide attached properties for <c>Behavior</c> binding in <c>ControlTemplate</c>

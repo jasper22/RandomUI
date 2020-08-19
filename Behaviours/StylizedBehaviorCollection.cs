@@ -2,7 +2,7 @@
 namespace RandomUI.Behaviours
 {
     using System.Windows;
-    using System.Windows.Interactivity;
+    using Microsoft.Xaml.Behaviors;
 
     /// <summary>
     /// Freezable collection of <see cref="Behavior"/> objects

@@ -3,7 +3,7 @@ namespace RandomUI.Behaviours
 {
     using System.Windows;
     using System.Windows.Documents;
-    using System.Windows.Interactivity;
+    using Microsoft.Xaml.Behaviors;
     using RandomUI.Controls;
 
     /// <summary>
