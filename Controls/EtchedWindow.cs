@@ -41,6 +41,22 @@ namespace RandomUI.Controls
         }
 
         /// <summary>
+        /// Raises the <see cref="E:System.Windows.FrameworkElement.Initialized" /> event. This method is invoked whenever <see cref="P:System.Windows.FrameworkElement.IsInitialized" /> is set to <see langword="true " />internally.
+        /// </summary>
+        /// <param name="e">The <see cref="T:System.Windows.RoutedEventArgs" /> that contains the event data.</param>
+        /// <remarks>
+        ///     Sometimes the 'Style' property for template didn't pick up when this code was copy/paste in other location
+        ///     So - adding this override function will insert correct StyleKey and everything just works
+        /// </remarks>
+        protected override void OnInitialized(EventArgs e)
+        {
+            base.OnInitialized(e);
+
+            this.DefaultStyleKey = typeof(EtchedWindow);
+        }
+
+
+        /// <summary>
         /// Gets or sets a value indicating whether this instance is window dragging.
         /// </summary>
         /// <value>
