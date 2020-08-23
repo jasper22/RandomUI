@@ -98,8 +98,6 @@
     <Compile Include="Controls\ValueConverters\TranslateTransformToRectViewboxVisualBrushConverter.cs" />
     <Compile Include="Controls\WindowResizingAdorner.cs" />
     <Compile Include="Data\WindowDataContext.cs" />
-    <Compile Include="Styles\Class1.cs" />
-    <Compile Include="Themes\Class1.cs" />
     <Compile Include="_temp\Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
     </Compile>
