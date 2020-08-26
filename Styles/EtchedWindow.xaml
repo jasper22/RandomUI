@@ -11,24 +11,13 @@
         <AdornerDecorator d:DesignHeight="331" d:DesignWidth="537">
             <Border x:Name="OutherWindowBorder">
                 <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="101" />
-                        <RowDefinition Height="*"  />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="111" />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-
-
                     <Border x:Name="WindowBorder"
-                		Grid.Row="0"
-                		Grid.RowSpan="2"
-                		Grid.Column="0"
-                		Margin="38, 30, 0, 0"
-                		BorderThickness="1"
-                		ClipToBounds="False"
-                		CornerRadius="7" Background="{DynamicResource MainWindowBackground}" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" Grid.ColumnSpan="2">
+                		    Margin="38, 30, 0, 0"
+                		    BorderThickness="1"
+                		    ClipToBounds="False"
+                		    CornerRadius="7" 
+                            Background="{DynamicResource MainWindowBackground}" 
+                            d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
                         <Grid x:Name="PART_VisualStateGrid">
                             <!--<VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="WiGigWindowStates">
@@ -36,17 +25,11 @@
                                     <VisualState x:Name="ErrorState" />
                                 </VisualStateGroup>
                             </VisualStateManager.VisualStateGroups>-->
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="10*" />
-                                <RowDefinition Height="43*"/>
-                            </Grid.RowDefinitions>
-
-
                             <ContentPresenter x:Name="PART_MainContent"
-                				Grid.Row="1"
-                				Content="{TemplateBinding Content}"
-                				ContentTemplate="{TemplateBinding ContentTemplate}"
-                				ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" Grid.RowSpan="2" />
+                  				                Content="{TemplateBinding Content}"
+                				                ContentTemplate="{TemplateBinding ContentTemplate}"
+                				                ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}" 
+                                                d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" />
                         </Grid>
                     </Border>
                     <Controls:RoundedLaunchControl x:Name="roundedLaunchControl" Grid.Column="0" Grid.Row="0" Template="{DynamicResource RoundedLaunchControlTemplate}" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" />
